@@ -2,9 +2,10 @@
 import h5py
 from scipy.interpolate import griddata
 import numpy as np
-import mlsdata_screeming as ms
+from myModule import mlsdata_screeming as ms
 from datetime import datetime
 import sys
+import os
 
 # 抽出物理量変数
 phisical_quantity = ['O3', 'GPH', 'Temperature', 'H2O']
@@ -132,9 +133,16 @@ for day in range(day_max):
 
 # 端の日付[1/1, 12/31]などが移動平均したことによって欠損扱いになっていることに注意
 
-savefile = f'D:/data/test_MLS_griddata/move_and_complement/{pq2}/MLS-Aura_{pq2}_Mov{movingday_num}daysCom_griddata_{year}.npy'
+savefile = f'D:/TestDir/test_MLS_griddata/move_and_complement/{pq2}/MLS-Aura_{pq2}_Mov{movingday_num}daysCom_griddata_{year}.npy'
+# dirname = f'D:/TestDir/mls/{pq}/{year}'
+if not os.path.exists(savefile[:10]):
+    os.mkdir(savefile[:10])
+if not os.path.exists(savefile[:28]):
+    os.mkdir(savefile[:28])
+if not os.path.exists(savefile[:48]):
+    os.mkdir(savefile[:48])
+if not os.path.exists(savefile[:48] + f'/{pq}'):
+    os.mkdir(savefile[:48] + f'/{pq}')
 np.save(savefile, O3_4d_comp)
 
 print('Complete to make savefile!!!!')
-
-
