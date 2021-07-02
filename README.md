@@ -46,7 +46,7 @@ machine urs.earthdata.nasa.gov login Taro password 12345
 $ python transform_MLSgriddata_move_complement.py 
 ```
 グリッド化したデータは一年分を1つの.npyファイルに保存している。  
-＊各データは精度や信頼性によって条件を設ける必要があり、物理量によってその条件が違うため、詳しく知りたい方はこちらのURLを参照。
+＊各データは精度や信頼性によって条件を設ける必要があり、物理量によってその条件が違うため、詳しく知りたい方はこちらのURLを参照。  
 <https://acdisc.gesdisc.eosdis.nasa.gov/data/Aura_MLS_Level2/ML2O3.005/doc/Aura-MLS_DataQuality_v5-0x-revA.pdf>
 
 ### グリッド化詳細
