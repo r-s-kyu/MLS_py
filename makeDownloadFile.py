@@ -50,9 +50,9 @@ for pq in phisical_quantity:
             mf.getURL_year(year, downloadFile, url)
             year_count += 1
         except:
-            print("ループ終了")
+            print(f'finish {pq}')
             break
     
     
     f.close()
-    print(f"finish program")
+print(f"finish program")
