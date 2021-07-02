@@ -1,8 +1,28 @@
 # MLS_py
+MLSデータのダウンロードと経度緯度データに加工する実行ファイルを置いている。
+
+# Discription
 NASAのMLSデータはダウンロード方法が少々面倒であり、またこのデータは衛星軌道であるため、研究で用いる際は緯度経度座標にグリッド化する必要がある。
+
 以前から、自身のローカルPCでこのMLSデータをダウンロード・グリッド化するプログラムを作ってはいたが、自身しか読めないような粗末なものであったり、コードもぐちゃぐちゃであった。
+
 そのため今回はこの面倒な一連の作業を、簡潔にまとめ、これからMLSデータを扱う人にとって分かりやすく、研究に有効的なものになることを目指す。
 
+*物理量* O3(オゾン) H2O(水蒸気) Temperature(気温) GPH(等圧面高度)　の4つを抽出
+
+# Requirement
+- python3.8.5
+＊これよりバージョンが古くてもある程度は動く
+```
+$ pip install numpy
+$ pip install bs4
+$ pip install pandas
+$ pip install requests
+$ pip install import h5py
+$ pip install import scipy
+```
+
+# Usage
 ## ダウンロード前準備
 1. NASAのEARTHDATAのHP https://urs.earthdata.nasa.gov/users/new でアカウントを作る
 2. 作成したアカウント名・パスワード (例)name:Taro passward:12345 を忘れずに記録し次の手順で使用。
