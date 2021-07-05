@@ -58,7 +58,7 @@ for day in range(day_max):
 
     str_day = str(day+1).zfill(3)
     #データ読み込み
-    file = f'D:/data/testmls/{pq2}/{year}/{year}d{str_day}.he5'
+    file = f'D:/TestDir/mls/{pq2}/{year}/{year}d{str_day}.he5'
     try:    
         with h5py.File(file, 'r') as f:
             # 非推奨  data = f['HDFEOS']['SWATHS']['pq']['Data Fields']['pq'].value 
