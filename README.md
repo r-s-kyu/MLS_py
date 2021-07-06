@@ -15,6 +15,7 @@ NASAのMLSデータはダウンロード方法が少々面倒であり、また�
 ```
 $ pip install numpy
 $ pip install bs4
+$ pip install lxml
 $ pip install pandas
 $ pip install requests
 $ pip install import h5py
